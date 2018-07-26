@@ -25,5 +25,5 @@ function currentLine(katzDeliLine){
     lineName.push(' ' +[i+1] + '.' + katzDeliLine[i])
   }
   //console.log('The line is currently:' + lineName);
-  return (`The line is currently:` + lineName.join(', '));
+  return (`The line is currently:` + lineName);
 }
