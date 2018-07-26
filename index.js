@@ -15,15 +15,19 @@ function nowServing(katzDeliLine){
   } else return `Currently serving ${katzDeliLine.shift()}.`;
 }
 
-function currentLine(katzDeliLine){
-  if(katzDeliLine.length === 0){
-    return `The line is currently empty.`;
-  }
-  var lineName = [];
+var line = [];
 
-  for(var i=0; i < katzDeliLine.length; i++){
-    lineName.push(' ' +[i+1] + '.' + katzDeliLine[i])
+
+
+
+function currentLine(katzDeli) {
+  let i = 0;
+  while (i < katzDeli.length) {
+    line.push(` `+[i+1]+`. `  + katzDeli[i])
+    i++;
   }
-  //console.log('The line is currently:' + lineName);
-  return (`The line is currently:` + lineName);
+  if (katzDeli.length === 0) {
+    return "The line is currently empty.";
+  } else
+  return(`The line is currently:` + line);
 }
